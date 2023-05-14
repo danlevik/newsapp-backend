@@ -108,7 +108,7 @@ app.get("/tags", TagController.getAll);
 app.get("/tags/:id", TagController.getOne);
 app.post("/tags", bodyParser.json(), TagController.create);
 
-app.listen(4444, (err) => {
+app.listen(process.env.PORT || 4444, (err) => {
   if (err) {
     return console.log(err);
   }

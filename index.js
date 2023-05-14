@@ -22,7 +22,8 @@ import bodyParser from "body-parser";
 
 mongoose
   .connect(
-    "mongodb+srv://admin:qwe123@newsapp.dficgzh.mongodb.net/newsapp?retryWrites=true&w=majority"
+    // "mongodb+srv://admin:qwe123@newsapp.dficgzh.mongodb.net/newsapp?retryWrites=true&w=majority"
+    process.env.MONGODB_URI
   )
   .then(() => {
     console.log("DB connected");
